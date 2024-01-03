@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Propertiku</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Propertku</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar - links for Login, Review, Property -->
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Features
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review1.html">
+                    <i class="fas fa-fw fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="property.html">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Property</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="transaction.html">
+                    <i class="fas fa-fw fa-exchange-alt"></i>
+                    <span>Transaction</span>
+                </a>
+            </li>
+            <!-- End of Sidebar - links for Login, Review, Property -->
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Navbar content -->
+                    <a class="navbar-brand" href="#">
+                        PROPERTIKU
+                    </a>
+
+                    <button class="btn btn-link d-md-none rounded-circle mr-3" id="sidebarToggle">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Afnan</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <div class="dropdown-divider"></div>
+                                <button class="dropdown-item" id='btnLogout'>
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="container-fluid">
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h1 class="h3 mb-0 text-gray-800">Edit Property</h1>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card shadow">
+                                        <div class="card-header"><strong>Isi Form Dibawah Ini!</strong></div>
+                                        <div class="card-body">
+                                            <form id="propertyForm">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-10">
+                                                        <label for="nama_barang"><strong>Nama Property</strong></label>
+                                                        <input type="text" name="nama" id="nama" autocomplete="on" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-10">
+                                                        <label for="nama_barang"><strong>Deskripsi Property</strong></label>
+                                                        <input type="text" name="deskripsi" id="deskripsi" autocomplete="off" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-10">
+                                                        <label for="harga_beli"><strong>Harga</strong></label>
+                                                        <input type="text" name="harga" id="harga" autocomplete="off" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-10">
+                                                        <label for="harga_beli"><strong>Lokasi</strong></label>
+                                                        <input type="text" name="lokasi" id="lokasi" autocomplete="off" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-10">
+                                                        <label for="stok"><strong>Tipe Property</strong></label>
+                                                        <select name="tipe_property" id="tipe_property" class="form-control" required>
+                                                            <option id="tipe_property" value="Rumah">Rumah</option>
+                                                            <option id="tipe_property" value="Apartement">Apartement</option>
+                                                        </select>
+                                                        <!-- <select name="tipe_property" id="tipe_property" class="form-control" required>
+                                                            <option value="">-- Silahkan Pilih --</option>
+                                                            <option value="Rumah">Rumah</option>
+                                                            <option value="Apartement">Apertement</option>
+                                                        </select> -->
+                                                    </div>
+                                                </div>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-10">
+                                                        <label for="harga_beli"><strong>Stok</strong></label>
+                                                        <input type="text" name="stok_unit" id="stok_unit" autocomplete="off" class="form-control" required>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-group">
+                                                    <button type="button" class="btn btn-primary" id="btnLoad"><i class="fa fa-save"></i>&nbsp;&nbsp;Load</button>
+                                                    <button type="button" class="btn btn-primary" id="btnSave"><i class="fa fa-save"></i>&nbsp;&nbsp;Simpan</button>
+                                                    <a href="property.html" class="btn btn-danger"><i class="fa fa-times"></i>&nbsp;&nbsp;Batal</a>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script>
+        
+        $(document).ready(function () {
+          // Fungsi untuk mendapatkan nilai parameter dari URL
+            function getParameterByName(name, url) {
+                if (!url) url = window.location.href;
+                name = name.replace(/[\[\]]/g, "\\$&");
+                var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+                if (!results) return null;
+                if (!results[2]) return '';
+                return decodeURIComponent(results[2].replace(/\+/g, " "));
+            }
+
+            // Mendapatkan nilai ID dari URL
+            var propertyId = getParameterByName('id');
+
+
+            // Lakukan permintaan AJAX jika nilai ID ditemukan
+            if (propertyId) {
+                // URL endpoint dengan parameter ID
+                var url = 'http://localhost/fproject/index.php/api/property/?id=' + propertyId;
+
+                // Sample data
+                
+            // Permintaan AJAX menggunakan Fetch API
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                var optionsData = [
+                    { value: 'Rumah', text: 'Rumah' },
+                    { value: 'Apartemen', text: 'Apartement' },
+                ];
+                // Manipulasi data atau tampilkan di HTML
+        
+                // Set nilai formulir berdasarkan data yang dimuat
+                $("#nama").val(data[0].nama);
+                $("#deskripsi").val(data[0].deskripsi);
+                $("#harga").val(data[0].harga);
+                $("#lokasi").val(data[0].lokasi);
+                $("#tipe_property").optionsData.forEach(function (option) {
+                    var optionElement = document.createElement('option');
+                    optionElement.value = option.value;
+                    optionElement.text = option.text;
+
+                    // Set selected attribute conditionally
+                    if (option.value === val(data[0].tipe_properti)) {
+                        optionElement.selected = true;
+                    }
+
+                    selectElement.appendChild(optionElement);
+                });
+                $("#lokasi").val(data[0].lokasi);
+                $("#stok_unit").val(data[0].stok_unit);
+              })
+              .catch(error => console.error('Error:', error));
+          }
+        
+          // Fungsi untuk menyimpan perubahan pada data properti saat tombol Simpan ditekan
+          $('#btnSave').on('click', function () {
+            $.ajax({
+              type: "PUT",
+              url: 'http://localhost/fproject/index.php/api/property/?id=' + propertyId,
+              data: {
+                nama: $("#nama").val(),
+                deskripsi: $("#deskripsi").val(),
+                harga: $("#harga").val(),
+                lokasi: $("#lokasi").val(),
+                tipe_properti: $("#tipe_property").val(),
+                stok_unit: $("#stok_unit").val()
+              },
+              dataType: "json",
+              success: function (data) {
+                console.log("Property updated:", data);
+                // Handle respon sukses sesuai kebutuhan Anda
+              },
+              error: function (error) {
+                console.error("Error updating property:", error);
+                // Handle kesalahan sesuai kebutuhan Anda
+              }
+            });
+          });
+        
+          // Tombol Logout
+          $(document).on('click', '#btnLogout', function () {
+            var base_url = "http://localhost/fproject/index.php/api/user/";
+            $.ajax({
+              type: "POST",
+              url: base_url + "logout", // Ganti dengan URL logout yang sesuai
+              dataType: "json",
+              cache: false,
+              success: function (response) {
+                localStorage.removeItem('token');
+                window.location.href = 'http://localhost:8080/login.html';
+              },
+              error: function (xhr, status, error) {
+                console.error("Gagal melakukan logout:", error);
+                // Handle error, display a message, or perform other actions if needed
+              }
+            });
+          });
+        
+        });
+        </script>
+</body>
+
+</html>

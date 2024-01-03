@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>WebPro 2 - Dashboard</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- ... (your sidebar content) ... -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Propertku</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+            <!-- Sidebar - links for Login, Review, Property -->
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Features
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">
+                    <i class="fas fa-fw fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="property.html">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Property</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="transaction.html">
+                    <i class="fas fa-fw fa-exchange-alt"></i>
+                    <span>Transaction</span>
+                </a>
+            </li>
+        </ul>
+
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- ... (your navbar content) ... -->
+                </nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Edit Review</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card shadow">
+                                <div class="card-header"><strong>Edit Review Data</strong></div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-10">
+                                                <label for="nama_barang"><strong>id Properti</strong></label>
+                                                <input type="text" name="property_id" id="property_id"
+                                                    placeholder="Masukkan id Property" autocomplete="off"
+                                                    class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-10">
+                                                <label for="nama_barang"><strong>User id</strong></label>
+                                                <input type="text" name="user_id" id="user_id"
+                                                    placeholder="Masukkan id User" autocomplete="off"
+                                                    class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-10">
+                                                <label for="harga_beli"><strong>Rating</strong></label>
+                                                <input type="text" name="rating" id="rating"
+                                                    placeholder="Masukkan Rating Anda" autocomplete="off"
+                                                    class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-10">
+                                                <label for="harga_beli"><strong>Komentar</strong></label>
+                                                <input type="text" name="review_text" id="review_text"
+                                                    placeholder="Masukkan Komentar Anda" autocomplete="off"
+                                                    class="form-control" required>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="form-group">
+                                            <button type="button" class="btn btn-primary" id="btnSave"><i
+                                                    class="fa fa-save"></i>&nbsp;&nbsp;Simpan</button>
+                                            <a href="review.html" class="btn btn-danger"><i
+                                                    class="fa fa-times"></i>&nbsp;&nbsp;Batal</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="sticky-footer bg-white">
+            <div class="container my-auto">
+                <div class="copyright text-center my-auto">
+                    <span>Copyright &copy; WebPro 2023</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    </div>
+
+    <!-- ... (your other scripts and modal) ... -->
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var base_url = "http://localhost/fproject/index.php/api/";
+
+            function getReviewData(reviewId) {
+                $.ajax({
+                    type: "GET",
+                    url: base_url,
+                    data: { review_id: reviewId },
+                    dataType: "json",
+                    success: function (data) {
+                        $("#property_id").val(data.property_id);
+                        $("#user_id").val(data.user_id);
+                        $("#rating").val(data.rating);
+                        $("#review_text").val(data.review_text);
+                    },
+                    error: function (error) {
+                        console.error("Error fetching review data:", error);
+                    }
+                });
+            }
+
+            // Panggil fungsi untuk mendapatkan data review yang akan diubah
+            getReviewData(reviewIdToEdit);
+
+            $("#btnSave").on("click", function () {
+                var updatedData = {
+                    review_id: reviewIdToEdit,
+                    property_id: $("#property_id").val(),
+                    user_id: $("#user_id").val(),
+                    rating: $("#rating").val(),
+                    review_text: $("#review_text").val(),
+                };
+
+                $.ajax({
+                    type: "PUT",
+                    url: base_url,
+                    data: JSON.stringify(updatedData),
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        console.log("Review updated:", response);
+                        // Handle success response as needed
+                    },
+                    error: function (error) {
+                        console.error("Error updating review:", error);
+                        // Handle error response as needed
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

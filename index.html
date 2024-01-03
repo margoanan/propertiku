@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Propertiku</title>
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Propertku</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+            
+            <!-- Sidebar - links for Login, Review, Property -->
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Features
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">
+                    <i class="fas fa-fw fa-user"></i>
+                    <span>Login</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review1.html">
+                    <i class="fas fa-fw fa-star"></i>
+                    <span>Review</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="property.html">
+                    <i class="fas fa-fw fa-home"></i>
+                    <span>Property</span>
+                </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link" href="transaction.html">
+                    <i class="fas fa-fw fa-exchange-alt"></i>
+                    <span>Transaction</span>
+                </a>
+            </li>
+            
+            <!-- End of Sidebar - links for Login, Review, Property -->
+        </ul>
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                    <!-- Navbar content -->
+                    <!-- ... (your navbar content) ... -->
+                </nav>
+                <div class="container-fluid">
+
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">List Property</h1>                       
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+                    
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-md-12" style="text-align: center;">
+                            <table class="table table-bordered" style="text-align: center;">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10%;">NO</th>
+                                        <th>Nama</th>
+                                        <th>Deskripsi</th>
+                                        <th>harga</th>
+                                        <th>lokasi</th>
+                                        <th>Tipe Properti</th>
+                                        <th>Bangunan Dibuat</th>
+                                        <th>Aksi</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="myBody">
+                                    
+                                    <!-- Baris data lainnya disini -->
+                                </tbody>
+
+                                </tbody>
+                            </table>
+                        </div>                        
+                    </div>
+
+                    <!-- Page content -->
+                    <!-- Anda dapat menambahkan konten baru Anda di sini -->
+                </div>
+            </div>
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/sb-admin-2.min.js"></script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
+    <script src="js/demo/chart-pie-demo.js"></script>
+    <script>
+        $(document).ready(function () {
+            var base_url = "http://localhost/fproject/index.php/api/";
+
+            // AJAX request untuk mendapatkan data properti dari server
+            $.ajax({
+                type: "GET",
+                url: base_url + "property",
+                dataType: "json",
+                cache: false,
+                success: function (responseData) {
+                    let dataBody = "";
+                    for (let i = 0; i < responseData.length; i++) {
+                        dataBody += `<tr>
+                                        <td>${i + 1}</td>
+                                        <td>${responseData[i].nama}</td>
+                                        <td>${responseData[i].deskripsi}</td>
+                                        <td>${responseData[i].harga}</td>
+                                        <td>${responseData[i].lokasi}</td>
+                                        <td>${responseData[i].tipe_properti}</td>
+                                        <td>${responseData[i].tanggal_dibuat}</td>
+                                        <td>
+                                            <button class="btn btn-sm btn-info btnReview" data-id="${responseData[i].id}"><i class="fa fa-eye"></i> Review</button>&nbsp;
+                                            <button class="btn btn-sm btn-warning btnBuy" data-id="${responseData[i].id}"><i class="fa fa-pen"></i> Beli</button>&nbsp;
+                                        </td>
+                                    </tr>`;
+                    }
+                    $("#myBody").empty().append(dataBody);
+                },
+                error: function (xhr, status, error) {
+                    console.error("Gagal memuat data properti:", error);
+                    $("#myBody").html('<tr><td colspan="6">Gagal memuat data properti</td></tr>');
+                }
+            });
+
+            // Fungsi untuk menampilkan properti
+            $(document).on('click', '.btnReview', function () {
+                let propertyId = $(this).data('id');
+                window.location.href = `property_detail.html?id=${propertyId}`;
+            });
+
+            // Fungsi untuk mengedit properti
+            $(document).on('click', '.btnBuy', function () {
+                var propertyId = $(this).data('id');
+                window.location.href = `transaction_create.html?id=${propertyId}`;
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
